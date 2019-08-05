@@ -10,7 +10,18 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  color: $yellow;
-  background: $violet;
+.notepad {
+  background-image: url(../assets/img/art-artist-background-316466.jpg);
+  height: 100vh;
+  background-position: center;
+  text-align: center;
+  &__header{
+    font-size: 40px;
+  } 
 }
+
+input{
+  width: 50%;
+  height: 50vh;
+}
+

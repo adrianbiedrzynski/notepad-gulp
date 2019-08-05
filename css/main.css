@@ -331,6 +331,7 @@ body {
     color: #8b0f0f; }
   .notepad__load {
     font-family: 'Cinzel', serif;
+    background-color: white;
     color: #8b0f0f;
     font-size: 16px;
     border: 2px solid #8b0f0f;
@@ -351,6 +352,7 @@ body {
     margin: 1em; }
   .notepad__save {
     font-family: 'Cinzel', serif;
+    background-color: white;
     color: #8b0f0f;
     font-size: 16px;
     border: 2px solid #8b0f0f;

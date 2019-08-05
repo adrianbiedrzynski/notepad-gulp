@@ -18,8 +18,8 @@ if ('serviceWorker' in navigator) {
 // place your code below
 
 const textArea = document.querySelector('.text');
-const buttonSave = document.querySelector('.notepad__save');
-const buttonLoad = document.querySelector('.notepad__load');
+const buttonSave = document.querySelector('.notepad__button--save');
+const buttonLoad = document.querySelector('.notepad__button--load');
 
 buttonSave.addEventListener('click', (e) => {
   e.preventDefault();

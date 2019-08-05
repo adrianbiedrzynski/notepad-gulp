@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 
 
 html {
@@ -10,18 +11,122 @@ html {
   box-sizing: inherit;
 }
 
-.notepad {
+
+body{
   background-image: url(../assets/img/art-artist-background-316466.jpg);
   height: 100vh;
   background-position: center;
+ 
+  position: relative;
+
+}
+.notepad {
+  margin-top: 100px;
   text-align: center;
+
   &__header{
     font-size: 40px;
+    font-family: 'Cinzel', serif;
+    color: $red;
   } 
+
+
+  &__load{
+    font-family: 'Cinzel', serif;  
+    color: $red;
+    font-size: 16px;
+    border: 2px solid $red;
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    
+  }
+
+  &__save{
+    font-family: 'Cinzel', serif;
+    color: $red;
+    font-size: 16px;
+    border: 2px solid $red;
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    
+  }
+  &__load:hover{
+    color: black;
+  }
+
+  &__save:hover{
+    color: black;
+  }
+  &__load:hover span{
+    transform: translateY(0) scale(2);
+
+  }
+
+  &__save:hover span {
+    transform: translateY(0) scale(2);
+
+  }
 }
 
-input{
+span{
+  position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color:$red;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+span:nth-child(1){
+  --n: 1;
+}
+
+span:nth-child(2){
+  --n: 2;
+}
+
+span:nth-child(3){
+  --n: 3;
+}
+
+span:nth-child(4){
+  --n: 4;
+}
+
+
+.text {
   width: 50%;
   height: 50vh;
+  border-radius: 7%;
+  padding: 12px;
+  border: solid 2px $red;
 }
+
 

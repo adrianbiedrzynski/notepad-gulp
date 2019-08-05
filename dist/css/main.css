@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css?family=Cinzel&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -315,16 +316,108 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-.notepad {
+body {
   background-image: url(../assets/img/art-artist-background-316466.jpg);
   height: 100vh;
   background-position: center;
+  position: relative; }
+
+.notepad {
+  margin-top: 100px;
   text-align: center; }
   .notepad__header {
-    font-size: 40px; }
+    font-size: 40px;
+    font-family: 'Cinzel', serif;
+    color: #8b0f0f; }
+  .notepad__load {
+    font-family: 'Cinzel', serif;
+    color: #8b0f0f;
+    font-size: 16px;
+    border: 2px solid #8b0f0f;
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    margin: 1em; }
+  .notepad__save {
+    font-family: 'Cinzel', serif;
+    color: #8b0f0f;
+    font-size: 16px;
+    border: 2px solid #8b0f0f;
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    margin: 1em; }
+  .notepad__load:hover {
+    color: black; }
+  .notepad__save:hover {
+    color: black; }
+  .notepad__load:hover span {
+    -webkit-transform: translateY(0) scale(2);
+        -ms-transform: translateY(0) scale(2);
+            transform: translateY(0) scale(2); }
+  .notepad__save:hover span {
+    -webkit-transform: translateY(0) scale(2);
+        -ms-transform: translateY(0) scale(2);
+            transform: translateY(0) scale(2); }
 
-input {
+span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #8b0f0f;
+  -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
+          transform: translateY(150%);
+  border-radius: 50%;
+  left: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: calc((var(--n) - 1) * 0.1s);
+       -o-transition-delay: calc((var(--n) - 1) * 0.1s);
+          transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1; }
+
+span:nth-child(1) {
+  --n: 1; }
+
+span:nth-child(2) {
+  --n: 2; }
+
+span:nth-child(3) {
+  --n: 3; }
+
+span:nth-child(4) {
+  --n: 4; }
+
+.text {
   width: 50%;
-  height: 50vh; }
+  height: 50vh;
+  border-radius: 7%;
+  padding: 12px;
+  border: solid 2px #8b0f0f; }
 
 /*# sourceMappingURL=main.css.map */

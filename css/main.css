@@ -319,6 +319,7 @@ html {
 body {
   background-image: url(../assets/img/art-artist-background-316466.jpg);
   height: 100vh;
+  overflow: hidden;
   background-position: center;
   position: relative; }
 
@@ -402,18 +403,14 @@ span {
        -o-transition-delay: calc((var(--n) - 1) * 0.1s);
           transition-delay: calc((var(--n) - 1) * 0.1s);
   z-index: -1; }
-
-span:nth-child(1) {
-  --n: 1; }
-
-span:nth-child(2) {
-  --n: 2; }
-
-span:nth-child(3) {
-  --n: 3; }
-
-span:nth-child(4) {
-  --n: 4; }
+  span:nth-child(1) {
+    --n: 1; }
+  span:nth-child(2) {
+    --n: 2; }
+  span:nth-child(3) {
+    --n: 3; }
+  span:nth-child(4) {
+    --n: 4; }
 
 .text {
   width: 50%;
@@ -421,5 +418,16 @@ span:nth-child(4) {
   border-radius: 7%;
   padding: 12px;
   border: solid 2px #8b0f0f; }
+
+@media (max-width: 650px) {
+  body {
+    background-image: url(../assets/img/art-artist-background-316466.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position-x: right;
+    position: relative; }
+  .notepad {
+    text-align: center;
+    margin-top: 20px; } }
 
 /*# sourceMappingURL=main.css.map */
